@@ -1,0 +1,77 @@
+deploy_vsphere_ip: ''
+deploy_vsphere_host: ''
+deploy_vsphere_user: ''
+deploy_vsphere_password: ''
+deploy_vsphere_datacenter: ''
+deploy_vsphere_cluster: ''
+deploy_vsphere_folder: K8S UAT (Kubeadm)
+deploy_vsphere_resourcepool: K8S UAT (Kubeadm)
+guest_network: DPort-VLAN 106
+guest_netmask: ''
+guest_gateway: ''
+guest_dns_server: ''
+guest_domain_name: ''
+globalDNS: ''
+sshkey_path: /root/.ssh/
+dev: /dev/sda3
+vg_name: ubuntu-vg
+lv_name: ubuntu-lv
+OS: xUbuntu_20.04
+VERSION: '1.18'
+kubeAptVersion: 1.20.7-00
+docker_ip: ''
+kubproxy_apiVersion: v1alpha1
+kubernetesVersion: 1.20.7-00
+controlPlaneEndpoint: 
+podSubnet: 192.168.0.0/16
+serviceSubnet: ''
+kubadm_apiVersion: v1beta2
+istioProfile: default
+k8s_master_hostname: k8s-uat-master01
+k8s_master_IP: ''
+k8s_ws_IP: ''
+kubectlVer: v1.20.7
+kubectlURL: >-
+  https://storage.googleapis.com/kubernetes-release/release/{{ kubectlVer
+  }}/bin/linux/amd64/kubectl
+calicoctlVer: v3.16.1
+calicoctlURL: >-
+  https://github.com/projectcalico/calicoctl/releases/download/{{ calicoctlVer
+  }}/calicoctl
+istioVer: 1.7.2
+istioctlPath: /root/istio-{{ istioVer }}/bin
+helmVer: v3.3.4
+helmURL: https://get.helm.sh/helm-{{ helmVer }}-linux-amd64.tar.gz
+nfsClientImage: quay.io/external_storage/nfs-client-provisioner:latest
+provisionerName: uat-vsan-nfs
+nfsStorageClassName: vsan-nfs
+nfsServerIP: ''
+nfsPath: /K8S-UAT-NFS
+minioMode: distributed
+minioReplicas: '4'
+minioStorageClass: vsan-nfs
+minioNodeSelector: .role=worker
+minioAccessKey: minio
+minioSecretKey: minio123
+minioPersistenceSize: 10Gi
+externaldns_pdns_api: ''
+externaldns_pdns_apikey: ''
+externaldns_loglevel: debug
+externaldns_image: asia.gcr.io/k8s-artifacts-prod/external-dns/external-dns:v0.7.4
+pdns_image: pschiffe/pdns-mysql:alpine
+pdns_admin_image: aescanero/powerdns-admin:latest
+pdns_db_image: mariadb:latest
+pdns_soa_name: ''
+pdns_soa_mail: ''
+pdns_zone: ''
+pdns_api_secret: ''
+pdns_db_secret: ''
+pdns_admin_secret: ''
+pdns_lb_ip: ''
+eckURL: https://download.elastic.co/downloads/eck/1.2.1/all-in-one.yaml
+cloudflareAPI: ''
+cloudflareEmail: 
+certmanagerURL: >-
+  https://github.com/jetstack/cert-manager/releases/download/v1.0.3/cert-manager.yaml
+certmanagerPlugin: >-
+  https://github.com/jetstack/cert-manager/releases/download/v1.0.3/kubectl-cert_manager-linux-amd64.tar.gz
